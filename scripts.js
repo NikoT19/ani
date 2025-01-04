@@ -1,4 +1,3 @@
-const
 
 const apiUrl = "https://gogoanime.dev/api"; // API URL
 const animeList = document.getElementById("animeList");
