@@ -1,1 +1,33 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime Stream</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Anime Stream</h1>
+    <input type="text" id="searchInput" placeholder="Search for an anime...">
+  </header>
+  
+  <main>
+    <div class="anime-list" id="animeList"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 Anime Stream. All rights reserved.</p>
+  </footer>
+
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <iframe id="animeVideo" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
