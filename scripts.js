@@ -57,6 +57,7 @@ const animeList = document.getElementById("animeList");
 
 const API_URL = "https://shikimori.me/api/animes";
 
+// Функция для поиска аниме
 searchInput.addEventListener("keyup", async (e) => {
   const query = e.target.value;
   if (query.length > 2) {
@@ -66,22 +67,23 @@ searchInput.addEventListener("keyup", async (e) => {
   }
 });
 
+// Отображение списка аниме
 function displayAnimeList(animes) {
-  animeList.innerHTML = "";
+  animeList.innerHTML = ""; // Очищаем список перед новым поиском
   animes.forEach((anime) => {
     const animeCard = document.createElement("div");
     animeCard.classList.add("anime-card");
+
+    // Добавляем карточку аниме с видеоплеером
     animeCard.innerHTML = `
       <img src="https://shikimori.me${anime.image.original}" alt="${anime.russian || anime.name}">
       <h3>${anime.russian || anime.name}</h3>
-      <button onclick="watchAnime('${anime.url}')">Смотреть</button>
+      <video controls>
+        <source src="URL_ВИДЕО" type="video/mp4">
+        Ваш браузер не поддерживает HTML5-видео.
+      </video>
     `;
     animeList.appendChild(animeCard);
   });
 }
-
-function watchAnime(url) {
-  window.open(url, "_blank");
-}
-
 
